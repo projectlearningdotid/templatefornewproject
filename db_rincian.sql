@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2021 at 12:35 PM
+-- Generation Time: Aug 08, 2021 at 11:51 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -66,6 +66,28 @@ INSERT INTO `t01_tahunajaran` (`idtahunajaran`, `tahun_ajaran`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `t02_kelas`
+--
+
+CREATE TABLE `t02_kelas` (
+  `idkelas` int(11) NOT NULL,
+  `sekolah` int(11) NOT NULL,
+  `kelas` varchar(100) NOT NULL,
+  `sub_kelas` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `t02_kelas`
+--
+
+INSERT INTO `t02_kelas` (`idkelas`, `sekolah`, `kelas`, `sub_kelas`) VALUES
+(1, 3, '1', 'SHAFA'),
+(2, 3, '1', 'MARWA'),
+(3, 3, '1', 'MASJIDIL HARAM');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `t88_menus`
 --
 
@@ -81,7 +103,8 @@ CREATE TABLE `t88_menus` (
 
 INSERT INTO `t88_menus` (`idmenus`, `menus`, `kode`) VALUES
 (13, 'Master - Sekolah', 'sekolah'),
-(14, 'Master - Tahun Ajaran', 'tahunajaran');
+(14, 'Master - Tahun Ajaran', 'tahunajaran'),
+(15, 'Master - Kelas', 'kelas');
 
 -- --------------------------------------------------------
 
@@ -170,7 +193,12 @@ INSERT INTO `t89_users_menus` (`idusersmenus`, `idusers`, `idmenus`, `rights`) V
 (72, 4, 14, 7),
 (73, 3, 14, 7),
 (74, 2, 14, 7),
-(75, 1, 14, 7);
+(75, 1, 14, 7),
+(76, 5, 15, 7),
+(77, 4, 15, 7),
+(78, 3, 15, 7),
+(79, 2, 15, 7),
+(80, 1, 15, 7);
 
 -- --------------------------------------------------------
 
@@ -205,7 +233,7 @@ CREATE TABLE `t90_users` (
 --
 
 INSERT INTO `t90_users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$10$dPHoARWNwi3q8RSaACTb6O0dK8fTNUfJ7K52jxOG7Bn15x2WHOciu', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1627857116, 1, 'Administrator', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2y$10$dPHoARWNwi3q8RSaACTb6O0dK8fTNUfJ7K52jxOG7Bn15x2WHOciu', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1628457488, 1, 'Administrator', 'istrator', 'ADMIN', '0'),
 (2, '::1', 'dodo', '$2y$10$45w8AaYwozR/hjmH.Qm0.OMxwJJs6BmFBbn2AIQP16NuDDDxbfvU6', 'e135146@f135146.g135146', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1625399506, 1628410468, 1, 'Dodo Ananto', NULL, NULL, NULL),
 (3, '::1', 'budi', '$2y$10$MvzwSXUbEi.0mYppxcxc9.6u1lE2K13ELcpw8GJkr1Xdo9co9aOjC', 'e195422@f195422.g195422', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1626198862, 1627203728, 1, 'Budi Wiranto', NULL, NULL, NULL),
 (4, '::1', 'ilham', '$2y$10$X9GVQQk4pD5UPWgbM8Qgq.4ljAUX.Fjytf3vXg5CahIcfMRDA6ac.', 'e212914@f212914.g212914', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1626204554, NULL, 1, 'Ilham', NULL, NULL, NULL),
@@ -276,7 +304,6 @@ CREATE TABLE `t93_login_attempts` (
 INSERT INTO `t93_login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
 (4, '::1', 'admin@admin.com', 1628410392),
 (5, '::1', 'admin@admin.com', 1628410397),
-(6, '::1', 'administrator', 1628410414),
 (7, '::1', 'admin@admin.com', 1628410418);
 
 -- --------------------------------------------------------
@@ -551,6 +578,12 @@ ALTER TABLE `t01_tahunajaran`
   ADD PRIMARY KEY (`idtahunajaran`);
 
 --
+-- Indexes for table `t02_kelas`
+--
+ALTER TABLE `t02_kelas`
+  ADD PRIMARY KEY (`idkelas`);
+
+--
 -- Indexes for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
@@ -631,16 +664,22 @@ ALTER TABLE `t01_tahunajaran`
   MODIFY `idtahunajaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `t02_kelas`
+--
+ALTER TABLE `t02_kelas`
+  MODIFY `idkelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
-  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `t89_users_menus`
 --
 ALTER TABLE `t89_users_menus`
-  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `t90_users`
