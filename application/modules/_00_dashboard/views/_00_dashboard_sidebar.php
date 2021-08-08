@@ -36,8 +36,8 @@
                     <li <?php echo $this->uri->segment(1) == 't99_company' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t99_company"><i class="fa fa-circle-o"></i> Company</a></li>
                     <li <?php echo $this->uri->segment(1) == 't88_menus' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t88_menus"><i class="fa fa-circle-o"></i> Menu</a></li>
                     <li <?php echo ($this->uri->segment(1) == 'auth' or $this->uri->segment(1) == 't89_users_menus') ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>auth"><i class="fa fa-circle-o"></i> User</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't98_akun' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t98_akun"><i class="fa fa-circle-o"></i> Akun</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't97_saldoawal' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t97_saldoawal"><i class="fa fa-circle-o"></i> Saldo Awal</a></li>
+                    <!-- <li <?php echo $this->uri->segment(1) == 't98_akun' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t98_akun"><i class="fa fa-circle-o"></i> Akun</a></li> -->
+                    <!-- <li <?php echo $this->uri->segment(1) == 't97_saldoawal' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t97_saldoawal"><i class="fa fa-circle-o"></i> Saldo Awal</a></li> -->
                     <!-- divider -->
                     <!-- <li role="presentation" class="divider"></li> -->
                     <!-- <hr> -->

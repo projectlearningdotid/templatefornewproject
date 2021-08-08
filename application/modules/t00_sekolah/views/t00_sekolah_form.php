@@ -54,7 +54,7 @@
                     <a href="<?php echo site_url('t00_sekolah') ?>" class="btn btn-default">Batal</a>
                 </div>
 
-				<input type="hidden" name="id" value="<?php echo $id; ?>" /> 
+				<input type="hidden" name="idsekolah" value="<?php echo $idsekolah; ?>" /> 
 			</form>
         </div>
     <!-- </body>

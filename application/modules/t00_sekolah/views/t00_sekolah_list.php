@@ -117,7 +117,7 @@
                     },
                     columns: [
                         {
-                            "data": "id",
+                            "data": "idsekolah",
                             "orderable": false
                         },
 						{"data": "kode"},

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2021 at 10:45 AM
+-- Generation Time: Aug 08, 2021 at 11:22 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `t00_sekolah` (
-  `id` int(11) NOT NULL,
+  `idsekolah` int(11) NOT NULL,
   `kode` varchar(2) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `alamat` text DEFAULT NULL,
@@ -509,7 +509,7 @@ INSERT INTO `t99_company` (`idcompany`, `nama`, `alamat`, `kota`) VALUES
 -- Indexes for table `t00_sekolah`
 --
 ALTER TABLE `t00_sekolah`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`idsekolah`);
 
 --
 -- Indexes for table `t88_menus`
@@ -583,7 +583,7 @@ ALTER TABLE `t99_company`
 -- AUTO_INCREMENT for table `t00_sekolah`
 --
 ALTER TABLE `t00_sekolah`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idsekolah` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `t88_menus`
