@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2021 at 11:51 PM
+-- Generation Time: Aug 09, 2021 at 01:29 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -88,6 +88,52 @@ INSERT INTO `t02_kelas` (`idkelas`, `sekolah`, `kelas`, `sub_kelas`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `t03_tagihan`
+--
+
+CREATE TABLE `t03_tagihan` (
+  `idtagihan` int(11) NOT NULL,
+  `nama` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `t03_tagihan`
+--
+
+INSERT INTO `t03_tagihan` (`idtagihan`, `nama`) VALUES
+(1, 'SYARIAH'),
+(2, 'CATERING'),
+(3, 'WORKSHEET');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t04_rincian`
+--
+
+CREATE TABLE `t04_rincian` (
+  `idrincian` int(11) NOT NULL,
+  `tahun_ajaran` int(11) NOT NULL,
+  `sekolah` int(11) NOT NULL,
+  `kelas` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t05_rinciandetail`
+--
+
+CREATE TABLE `t05_rinciandetail` (
+  `idrinciandetail` int(11) NOT NULL,
+  `rincian` int(11) NOT NULL,
+  `tagihan` int(11) NOT NULL,
+  `nominal` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `t88_menus`
 --
 
@@ -104,7 +150,9 @@ CREATE TABLE `t88_menus` (
 INSERT INTO `t88_menus` (`idmenus`, `menus`, `kode`) VALUES
 (13, 'Master - Sekolah', 'sekolah'),
 (14, 'Master - Tahun Ajaran', 'tahunajaran'),
-(15, 'Master - Kelas', 'kelas');
+(15, 'Master - Kelas', 'kelas'),
+(16, 'Master - Tagihan', 'tagihan'),
+(17, 'Master - Rincian', 'rincian');
 
 -- --------------------------------------------------------
 
@@ -198,7 +246,17 @@ INSERT INTO `t89_users_menus` (`idusersmenus`, `idusers`, `idmenus`, `rights`) V
 (77, 4, 15, 7),
 (78, 3, 15, 7),
 (79, 2, 15, 7),
-(80, 1, 15, 7);
+(80, 1, 15, 7),
+(81, 5, 16, 7),
+(82, 4, 16, 7),
+(83, 3, 16, 7),
+(84, 2, 16, 7),
+(85, 1, 16, 7),
+(86, 5, 17, 7),
+(87, 4, 17, 7),
+(88, 3, 17, 7),
+(89, 2, 17, 7),
+(90, 1, 17, 7);
 
 -- --------------------------------------------------------
 
@@ -584,6 +642,24 @@ ALTER TABLE `t02_kelas`
   ADD PRIMARY KEY (`idkelas`);
 
 --
+-- Indexes for table `t03_tagihan`
+--
+ALTER TABLE `t03_tagihan`
+  ADD PRIMARY KEY (`idtagihan`);
+
+--
+-- Indexes for table `t04_rincian`
+--
+ALTER TABLE `t04_rincian`
+  ADD PRIMARY KEY (`idrincian`);
+
+--
+-- Indexes for table `t05_rinciandetail`
+--
+ALTER TABLE `t05_rinciandetail`
+  ADD PRIMARY KEY (`idrinciandetail`);
+
+--
 -- Indexes for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
@@ -670,16 +746,34 @@ ALTER TABLE `t02_kelas`
   MODIFY `idkelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `t03_tagihan`
+--
+ALTER TABLE `t03_tagihan`
+  MODIFY `idtagihan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `t04_rincian`
+--
+ALTER TABLE `t04_rincian`
+  MODIFY `idrincian` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `t05_rinciandetail`
+--
+ALTER TABLE `t05_rinciandetail`
+  MODIFY `idrinciandetail` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
-  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `t89_users_menus`
 --
 ALTER TABLE `t89_users_menus`
-  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT for table `t90_users`
