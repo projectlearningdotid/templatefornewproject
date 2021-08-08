@@ -23,7 +23,7 @@ $lang['error_csrf'] = 'This form post did not pass our security checks.';
 // Login
 $lang['login_heading']         = 'Login';
 $lang['login_subheading']      = 'Please login with your email/username and password below.';
-$lang['login_identity_label']  = 'Email/Username:';
+$lang['login_identity_label']  = 'Username:';
 $lang['login_password_label']  = 'Password:';
 $lang['login_remember_label']  = 'Remember Me:';
 $lang['login_submit_btn']      = 'Login';
@@ -32,7 +32,8 @@ $lang['login_forgot_password'] = 'Forgot your password?';
 // Index
 $lang['index_heading']           = 'Users';
 $lang['index_subheading']        = 'Below is a list of the users.';
-$lang['index_fname_th']          = 'First Name';
+$lang['index_uname_th']          = 'Username';
+$lang['index_fname_th']          = 'Name';
 $lang['index_lname_th']          = 'Last Name';
 $lang['index_email_th']          = 'Email';
 $lang['index_groups_th']         = 'Groups';
@@ -76,13 +77,14 @@ $lang['create_user_validation_password_confirm_label'] = 'Password Confirmation'
 // Edit User
 $lang['edit_user_heading']                           = 'Edit User';
 $lang['edit_user_subheading']                        = 'Please enter the user\'s information below.';
-$lang['edit_user_fname_label']                       = 'First Name:';
+$lang['edit_user_fname_label']                       = 'Nama';
+$lang['edit_user_identity_label']                    = 'Username';
 $lang['edit_user_lname_label']                       = 'Last Name:';
 $lang['edit_user_company_label']                     = 'Company Name:';
 $lang['edit_user_email_label']                       = 'Email:';
 $lang['edit_user_phone_label']                       = 'Phone:';
-$lang['edit_user_password_label']                    = 'Password: (if changing password)';
-$lang['edit_user_password_confirm_label']            = 'Confirm Password: (if changing password)';
+$lang['edit_user_password_label']                    = 'Password (if changing password)';
+$lang['edit_user_password_confirm_label']            = 'Confirm Password (if changing password)';
 $lang['edit_user_groups_heading']                    = 'Member of groups';
 $lang['edit_user_submit_btn']                        = 'Save User';
 $lang['edit_user_validation_fname_label']            = 'First Name';
