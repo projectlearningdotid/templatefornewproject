@@ -9,8 +9,8 @@ class T00_sekolah extends CI_Controller
     {
         parent::__construct();
         $this->load->model('T00_sekolah_model');
-        $this->load->library('form_validation');        
-		$this->load->library('datatables');        
+        $this->load->library('form_validation');
+		$this->load->library('datatables');
 		$this->load->model('t89_users_menus/T89_users_menus_model');
     }
 
@@ -145,9 +145,9 @@ class T00_sekolah extends CI_Controller
     {
 		$this->form_validation->set_rules('kode', 'kode', 'trim|required');
 		$this->form_validation->set_rules('nama', 'nama', 'trim|required');
-		$this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
-		$this->form_validation->set_rules('nomor_telepon', 'nomor telepon', 'trim|required');
-		$this->form_validation->set_rules('logo', 'logo', 'trim|required');
+		// $this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
+		// $this->form_validation->set_rules('nomor_telepon', 'nomor telepon', 'trim|required');
+		// $this->form_validation->set_rules('logo', 'logo', 'trim|required');
 		$this->form_validation->set_rules('idsekolah', 'idsekolah', 'trim');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 08, 2021 at 11:22 AM
+-- Generation Time: Aug 08, 2021 at 12:35 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.15
 
@@ -36,6 +36,33 @@ CREATE TABLE `t00_sekolah` (
   `logo` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `t00_sekolah`
+--
+
+INSERT INTO `t00_sekolah` (`idsekolah`, `kode`, `nama`, `alamat`, `nomor_telepon`, `logo`) VALUES
+(1, '01', 'MINU UNGGULAN BOJONEGORO', 'JL. JAMBEAN BOJONEGORO', '', ''),
+(2, '02', 'MINU KARAKTER BOJONEGORO', 'JL. JAMBEAN BOJONEGORO', '', ''),
+(3, '03', 'MINU ICP BOJONEGORO', 'JL. JAMBEAN BOJONEGORO', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `t01_tahunajaran`
+--
+
+CREATE TABLE `t01_tahunajaran` (
+  `idtahunajaran` int(11) NOT NULL,
+  `tahun_ajaran` varchar(9) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `t01_tahunajaran`
+--
+
+INSERT INTO `t01_tahunajaran` (`idtahunajaran`, `tahun_ajaran`) VALUES
+(1, '2021/2022');
+
 -- --------------------------------------------------------
 
 --
@@ -53,7 +80,8 @@ CREATE TABLE `t88_menus` (
 --
 
 INSERT INTO `t88_menus` (`idmenus`, `menus`, `kode`) VALUES
-(13, 'Master - Sekolah', 'sekolah');
+(13, 'Master - Sekolah', 'sekolah'),
+(14, 'Master - Tahun Ajaran', 'tahunajaran');
 
 -- --------------------------------------------------------
 
@@ -137,7 +165,12 @@ INSERT INTO `t89_users_menus` (`idusersmenus`, `idusers`, `idmenus`, `rights`) V
 (67, 4, 13, 7),
 (68, 3, 13, 7),
 (69, 2, 13, 7),
-(70, 1, 13, 7);
+(70, 1, 13, 7),
+(71, 5, 14, 7),
+(72, 4, 14, 7),
+(73, 3, 14, 7),
+(74, 2, 14, 7),
+(75, 1, 14, 7);
 
 -- --------------------------------------------------------
 
@@ -512,6 +545,12 @@ ALTER TABLE `t00_sekolah`
   ADD PRIMARY KEY (`idsekolah`);
 
 --
+-- Indexes for table `t01_tahunajaran`
+--
+ALTER TABLE `t01_tahunajaran`
+  ADD PRIMARY KEY (`idtahunajaran`);
+
+--
 -- Indexes for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
@@ -583,19 +622,25 @@ ALTER TABLE `t99_company`
 -- AUTO_INCREMENT for table `t00_sekolah`
 --
 ALTER TABLE `t00_sekolah`
-  MODIFY `idsekolah` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idsekolah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `t01_tahunajaran`
+--
+ALTER TABLE `t01_tahunajaran`
+  MODIFY `idtahunajaran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `t88_menus`
 --
 ALTER TABLE `t88_menus`
-  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `idmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `t89_users_menus`
 --
 ALTER TABLE `t89_users_menus`
-  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `idusersmenus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT for table `t90_users`

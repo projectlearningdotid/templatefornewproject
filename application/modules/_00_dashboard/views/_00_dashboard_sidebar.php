@@ -20,6 +20,7 @@
                 case 't97_saldoawal':
                 case 't89_users_menus':
                 case 't00_sekolah':
+                case 't01_tahunajaran':
                     echo 'active';
                     break;
             }
@@ -45,6 +46,7 @@
                     <li><a href="#"><hr></a></li>
                     <?php } ?>
                     <li <?php echo $this->uri->segment(1) == 't00_sekolah' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t00_sekolah"><i class="fa fa-circle-o"></i> Sekolah</a></li>
+                    <li <?php echo $this->uri->segment(1) == 't01_tahunajaran' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t01_tahunajaran"><i class="fa fa-circle-o"></i> Tahun Ajaran</a></li>
                 </ul>
             </li>
 
