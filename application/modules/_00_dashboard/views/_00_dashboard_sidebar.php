@@ -19,16 +19,7 @@
                 case 't98_akun':
                 case 't97_saldoawal':
                 case 't89_users_menus':
-                case 't00_customer':
-                case 't01_shipper':
-                case 't02_vendor':
-                case 't03_lokasi':
-                case 't04_armada':
-                case 't05_satuan':
-                case 't06_cost':
-                case 't07_service':
-                case 't08_bank':
-                case 't09_sparepart':
+                case 't00_sekolah':
                     echo 'active';
                     break;
             }
@@ -53,16 +44,7 @@
                     <!-- <div class="dropdown-divider"></div> -->
                     <li><a href="#"><hr></a></li>
                     <?php } ?>
-                    <li <?php echo $this->uri->segment(1) == 't00_customer' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t00_customer"><i class="fa fa-circle-o"></i> Customer</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't01_shipper' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t01_shipper"><i class="fa fa-circle-o"></i> Shipper</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't02_vendor' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t02_vendor"><i class="fa fa-circle-o"></i> Vendor</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't03_lokasi' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t03_lokasi"><i class="fa fa-circle-o"></i> Lokasi</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't04_armada' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t04_armada"><i class="fa fa-circle-o"></i> Armada</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't05_satuan' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t05_satuan"><i class="fa fa-circle-o"></i> Satuan</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't06_cost' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t06_cost"><i class="fa fa-circle-o"></i> Cost</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't07_service' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t07_service"><i class="fa fa-circle-o"></i> Service</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't08_bank' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t08_bank"><i class="fa fa-circle-o"></i> Bank</a></li>
-                    <li <?php echo $this->uri->segment(1) == 't09_sparepart' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t09_sparepart"><i class="fa fa-circle-o"></i> Sparepart</a></li>
+                    <li <?php echo $this->uri->segment(1) == 't00_sekolah' ? 'class="active"' : ''; ?>><a href="<?php echo site_url() ?>t00_sekolah"><i class="fa fa-circle-o"></i> Sekolah</a></li>
                 </ul>
             </li>
 
